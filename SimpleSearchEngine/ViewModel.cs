@@ -44,7 +44,12 @@ namespace SimpleSearchEngine
         {
             if (string.IsNullOrWhiteSpace(UserQueryModel.SearchField))
                 return;
-            string connstring = "Server=127.0.0.1; Port=5432; User Id=postgres; Password=1; Database=simplesearchengine;";
+            //string connstring = "Server=127.0.0.1; Port=5432; User Id=postgres; Password=1; Database=simplesearchengine;";
+            string connstring = "Server=127.0.0.1; " +
+                "Port=5432; " +
+                "User Id=postgres; " +
+                "Password=1; " +
+                "Database=simplesearchengine;";
             var connection = new NpgsqlConnection(connstring);
             connection.Open();
             var commandText = SqlCommandBuilder.BuildByFts(UserQueryModel.ConvertedToTsQuery);
