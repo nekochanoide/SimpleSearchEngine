@@ -7,8 +7,6 @@
         mc:Ignorable="d"
         Title="{Binding WindowName}" Height="450" Width="600"
         d:DataContext="{d:DesignInstance Type=local:ViewModel, IsDesignTimeCreatable=True}"
-        
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="19"
@@ -25,7 +23,7 @@
         <AdornerDecorator>
             <TextBox Text="{Binding UserQueryModel.SearchField, UpdateSourceTrigger=PropertyChanged, Delay=1000}" Padding="5" >
                 <local:WatermarkService.Watermark>
-                    <TextBlock Padding="5" FontSize="19">Пишите здесь искание текста</TextBlock>
+                    <TextBlock Padding="5" FontSize="19">Название и/или год</TextBlock>
                 </local:WatermarkService.Watermark>
             </TextBox>
         </AdornerDecorator>

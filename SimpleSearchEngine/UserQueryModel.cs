@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace SimpleSearchEngine
 {
@@ -20,11 +15,9 @@ namespace SimpleSearchEngine
                 if (value.StartsWith("all hail ", StringComparison.CurrentCultureIgnoreCase))
                     CultFound?.Invoke(this, value.Substring(9));
 #endif
-
                 var tokens = value.Trim().Split(' ');
                 Words = tokens;
                 ConvertedToTsQuery = string.Join(" & ", tokens);
-
                 SetField(ref searchField, value);
             }
         }
