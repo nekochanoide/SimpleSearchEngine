@@ -11,7 +11,7 @@ namespace SimpleSearchEngine
     {
         private ImageSource background;
         private UserQueryModel userQueryModel;
-        private string windowName;
+        private string windowName = "Поиск кино";
         private ObservableCollection<MovieModel> movies;
         private readonly string _pswd;
 
